@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TRUSTCRED AI — Alternative Credit Scoring & Banking Platform</title>
+  <meta name="description" content="AI-Powered alternative credit scoring and verifiable income analysis for small businesses, micro-merchants, and street entrepreneurs." />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23123B6D'><path d='M12 2L3 7v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-9-5zm0 2.18l7 3.89v4.93c0 4.54-3.14 8.79-7 9.9-3.86-1.11-7-5.36-7-9.9V8.07l7-3.89zM11 7h2v6h-2zm0 8h2v2h-2z'/></svg>" />
+  
+  <!-- Tailwind CSS & Google Fonts -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  
+  <!-- Lucide Icons & Chart.js -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', '-apple-system', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          },
+          colors: {
+            primary: {
+              50: '#EAF3FF',
+              100: '#D6E7FF',
+              500: '#2563EB',
+              600: '#1D4ED8',
+              800: '#123B6D',
+              900: '#0F2F57',
+            },
+            surface: {
+              page: '#F5F7FB',
+              card: '#FFFFFF',
+              border: '#E2E8F0',
+            },
+            text: {
+              main: '#172B4D',
+              secondary: '#64748B',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body { background-color: #F5F7FB; color: #172B4D; font-family: 'Inter', sans-serif; }
+    ::-webkit-scrollbar { width: 6px; height: 6px; }
+    ::-webkit-scrollbar-track { background: #F1F5F9; }
+    ::-webkit-scrollbar-thumb { background: #CBD5E1; border-radius: 4px; }
+    ::-webkit-scrollbar-thumb:hover { background: #94A3B8; }
+    .bank-card { background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 12px; box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.04); }
+    .bank-badge { display: inline-flex; align-items: center; padding: 0.125rem 0.5rem; border-radius: 9999px; font-size: 0.75rem; font-weight: 600; }
+    .bank-table-row { transition: background-color 0.15s ease; }
+    .bank-table-row:hover { background-color: #F8FAFC; }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col selection:bg-blue-500/20 selection:text-blue-900">
+  <div id="app" class="flex flex-col min-h-screen">
+    <!-- Dynamic Content Root: Loaded by app.js -->
+    <div id="appRoot">
+      <!-- Fallback Loading spinner if script is executing -->
+      <div id="initLoader" class="flex flex-col items-center justify-center min-h-screen">
+        <div class="w-10 h-10 border-4 border-blue-100 border-t-[#123B6D] rounded-full animate-spin"></div>
+        <span class="mt-4 text-xs text-slate-500 font-semibold">Connecting to TRUSTCRED AI Banking Platform...</span>
+      </div>
+    </div>
+  </div>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>
